@@ -23,7 +23,7 @@ export default function UserInput({userInput, onChange}) {
             required
             value={userInput.annualInvestment}
             onChange={(event) =>
-                onChange("anualInvestment", event.target.value)
+                onChange("annualInvestment", event.target.value)
             }
           />
         </p>
