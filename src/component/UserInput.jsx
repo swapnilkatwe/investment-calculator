@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 export default function UserInput({userInput, onChange}) {
 
@@ -16,11 +17,11 @@ export default function UserInput({userInput, onChange}) {
           />
         </p>
         <p>
-          <label>Anual Investment</label>
+          <label>Annual Investment</label>
           <input
             type="number"
             required
-            value={userInput.anualInvestment}
+            value={userInput.annualInvestment}
             onChange={(event) =>
                 onChange("anualInvestment", event.target.value)
             }
@@ -33,9 +34,9 @@ export default function UserInput({userInput, onChange}) {
           <input
             type="number"
             required
-            value={userInput.expectedReturns}
+            value={userInput.expectedReturn}
             onChange={(event) =>
-                onChange("expectedReturns", event.target.value)
+                onChange("expectedReturn", event.target.value)
             }
           />
         </p>
@@ -54,3 +55,9 @@ export default function UserInput({userInput, onChange}) {
     </section>
   );
 }
+
+// Below code to remove EsLint error: 'xyz' is missing in props validationeslintreact/prop-types
+UserInput.propTypes = {
+  userInput: PropTypes.object,
+  onChange: PropTypes.func
+};

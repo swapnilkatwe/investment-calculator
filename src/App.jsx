@@ -6,8 +6,8 @@ import UserInput from "./component/UserInput";
 function App() {
   const [userInput, setUserInput] = useState({
     initialInvestment: 10000,
-    anualInvestment: 1000,
-    expectedReturns: 5,
+    annualInvestment: 1000,
+    expectedReturn: 5,
     duration: 10,
   });
 
@@ -15,7 +15,7 @@ function App() {
     setUserInput((previousValue) => {
       return {
         ...previousValue,
-        [investmentType]: newValue,
+        [investmentType]: +newValue,
       };
     });
   }
