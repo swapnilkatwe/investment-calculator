@@ -1,16 +1,30 @@
-import logoImage from "./assets/investment-calculator-logo.png";
+import { useState } from "react";
+import Header from "./component/Header";
+import Result from "./component/Result";
+import UserInput from "./component/UserInput";
+
 function App() {
-  return (
-    <main id="header">
-      <div>
-        <img src={logoImage} />
-        <h1>Investment Calculator</h1>
-      </div>
+  const [userInput, setUserInput] = useState({
+    initialInvestment: 10000,
+    anualInvestment: 1000,
+    expectedReturns: 5,
+    duration: 10,
+  });
 
-      <div id="user-input">
-
-      </div>
-    </main>
+  function handleUserInput(investmentType, newValue) {
+    setUserInput((previousValue) => {
+      return {
+        ...previousValue,
+        [investmentType]: newValue,
+      };
+    });
+  }
+  return(
+    <>
+      <Header />
+      <UserInput userInput={userInput} onChange={handleUserInput}/>
+      <Result input={userInput}/>
+    </>
   );
 }
 
