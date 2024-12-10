@@ -6,11 +6,11 @@
 
 body {
   margin: 0;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Quicksand-bold", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: radial-gradient(#303b37, #1a1f1d);
-  color: #e1eeeb;
+  color: #ebd6cf;
   min-height: 100vh;
 }
 
@@ -35,7 +35,7 @@ body {
     max-width: 30rem;
     margin: 2rem auto;
     border-radius: 4px;
-    background: linear-gradient(180deg, #307e6c, #2b996d);
+    background: linear-gradient(180deg, #553703, #a5741d);
   }
 
   .input-group {
@@ -48,7 +48,7 @@ body {
     display: block;
     margin-bottom: 0.25rem;
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -56,10 +56,10 @@ body {
   #user-input input {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #76c0ae;
+    border: 1px solid #b18746;
     border-radius: 0.25rem;
     background-color: transparent;
-    color: #c2e9e0;
+    color: #f3e9b0;
     font-size: 1rem;
   }
 
@@ -74,13 +74,13 @@ body {
   
   #result thead {
     font-size: 0.7rem;
-    color: #83e6c0;
+    color: #e6e683;
   }
   
   #result tbody {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 0.85rem;
-    color: #c2e9e0;
+    color: #e9e1c2;
   }
   
   .center {

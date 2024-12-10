@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-export default function UserInput({userInput, onChange}) {
-
+export default function UserInput({ userInput, onChange }) {
   return (
     <section id="user-input">
       <div className="input-group">
@@ -12,7 +11,7 @@ export default function UserInput({userInput, onChange}) {
             required
             value={userInput.initialInvestment}
             onChange={(event) =>
-                onChange("initialInvestment", event.target.value)
+              onChange("initialInvestment", event.target.value)
             }
           />
         </p>
@@ -23,7 +22,7 @@ export default function UserInput({userInput, onChange}) {
             required
             value={userInput.annualInvestment}
             onChange={(event) =>
-                onChange("annualInvestment", event.target.value)
+              onChange("annualInvestment", event.target.value)
             }
           />
         </p>
@@ -35,9 +34,7 @@ export default function UserInput({userInput, onChange}) {
             type="number"
             required
             value={userInput.expectedReturn}
-            onChange={(event) =>
-                onChange("expectedReturn", event.target.value)
-            }
+            onChange={(event) => onChange("expectedReturn", event.target.value)}
           />
         </p>
         <p>
@@ -46,9 +43,7 @@ export default function UserInput({userInput, onChange}) {
             type="number"
             required
             value={userInput.duration}
-            onChange={(event) =>
-                onChange("duration", event.target.value)
-            }
+            onChange={(event) => onChange("duration", event.target.value)}
           />
         </p>
       </div>
@@ -59,5 +54,5 @@ export default function UserInput({userInput, onChange}) {
 // Below code to remove EsLint error: 'xyz' is missing in props validationeslintreact/prop-types
 UserInput.propTypes = {
   userInput: PropTypes.object,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
 };
